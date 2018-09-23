@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <!--
+    <servlet>
+        <servlet-name>OAuthCallbackListener</servlet-name>
+        <servlet-class>com.mycompany.oauthapp.servlet.OAuthCallbackListener</servlet-class>
+    </servlet>
+    -->
+    <servlet>
+        <servlet-name>ResourceDataHolder</servlet-name>
+        <servlet-class>com.mycompany.oauthapp.data.ResourceDataHolder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileOperations</servlet-name>
+        <servlet-class>com.mycompany.oauthapp.util.FileOperations</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>OAuthCallbackListener</servlet-name>
+        <servlet-class>com.mycompany.oauthapp.servlet.OAuthCallbackListener</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>OAuthCallbackListener</servlet-name>
+        <url-pattern>/callback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResourceDataHolder</servlet-name>
+        <url-pattern>/ResourceDataHolder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileOperations</servlet-name>
+        <url-pattern>/FileOperations</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
