@@ -33,6 +33,10 @@ After the above changes, build the project with Maven. (eg: mvn clean install).
 Once you have got the OAuthApp.war file in the target directory, deploy it in a web server (eg: tomcat).
 You can access the application with the URL https://localhost:(port)/OAuthApp 
 
+You need to configure HTTPS on your server in order to run this application.
+
+for more details about message flow visit my blog post 
+https://kalinduwijekoon.blogspot.com/2018/10/oauth-authorizationcode-grant-sample.html
 
 
 
